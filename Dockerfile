@@ -8,7 +8,7 @@ RUN echo ZGViIGh0dHA6Ly9hcmNoaXZlLmRlYmlhbi5vcmcvZGViaWFuLyBqZXNzaWUgbWFpbiBjb25
     mv /tmp/files/start.sh / && \
     chmod +x /flag.sh /start.sh && \
     apt-get update && \
-    apt-get install libaio1 libnuma1 psmisc libmecab2 init-system-helpers redis-server -y && \
+    apt-get install libaio1 libnuma1 psmisc libmecab2 init-system-helpers redis-server -y --force-yes && \
     DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/files/mysql-common_5.7.29-1debian8_amd64.deb && \
     DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/files/mysql-community-client_5.7.29-1debian8_amd64.deb && \
     DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/files/mysql-client_5.7.29-1debian8_amd64.deb && \
